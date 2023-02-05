@@ -2,6 +2,7 @@ const express = require("express");
 const app  = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+dotenv.config();
 const authUser = require("./Routes/auth");
 const updateUser = require("./Routes/users");
 const postRoute = require('./Routes/posts');
@@ -9,7 +10,7 @@ const CatagoriesRoute = require('./Routes/catagories');
 const multer = require("multer");
 const bodyparser = require("body-parser");
 
-const url = 'mongodb+srv://udoy752:udoy2326@cluster0.rdovm.mongodb.net/blogAPI'
+const url = process.env.PORT
 
 dotenv.config();
 //use json 
